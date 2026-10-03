@@ -1,6 +1,6 @@
 ---
 name: naver-blog-automation
-description: Plan, draft, revise, format, and save Naver Blog posts using a user's source links, STYLE_BLOG.md, and brand/BRAND.md. Use when asked to write a Naver post or move an approved draft into Naver SmartEditor. Do not apply to unrelated channels.
+description: Research, draft, revise, and upload Naver Blog posts using STYLE_BLOG.md and brand/BRAND.md. Use for Naver post creation or direct SmartEditor work, including image captions and draft saving. Do not apply to unrelated channels.
 ---
 
 # 네이버 블로그 작성 자동화
@@ -19,19 +19,27 @@ description: Plan, draft, revise, format, and save Naver Blog posts using a user
 
 사용자가 알려준 브랜드 소개, 독자, 서비스, 톤, 색상, 공개 연락처를 `brand/BRAND.md`에 반영한다. 로고가 제공되면 원본을 `brand/`에 보관하고 파일명을 기록한다. 자격·실적·고객 사례·사진 사용 권한은 확인된 범위만 적는다.
 
-## 3. 초안 작성과 수정
+## 3. 주제 자료 수집과 원문 캡처
+
+사용자가 주제를 정해 주면 그 주제에 필요한 1차 자료와 해설 자료를 찾는다. 판례 글에서는 법원 판결문을 우선 확인하고 로펌 뉴스레터는 해설로 구분한다. 확인한 URL, 작성자·발행일, 자료별 역할을 프로젝트의 해당 글 폴더에 기록하고, 원문 파일이나 확인 가능한 발췌 자료를 `sources/`에 보관한다. 접근하지 못한 자료는 저장하거나 읽은 것처럼 쓰지 않는다.
+
+원문 캡처가 필요한 글은 실제 PDF나 웹페이지에서 관련 부분을 캡처해 `assets/`에 저장한다. 생성 이미지로 원문 문구를 재현하지 않는다. 초안의 해당 주장 가까이에 실제 이미지 파일을 참조하고, 캡션에 자료명과 정확한 쪽수 또는 위치를 적는다.
+
+## 4. 초안 작성과 수정
 
 글의 핵심 질문과 독자가 가져갈 행동을 먼저 정한다. 원문 수치·날짜·인용을 확인하고 출처를 남긴다. 자료의 주장, 필자의 의견, 작성자의 추론을 구분한다. `STYLE_BLOG.md`의 실제 관찰과 `brand/BRAND.md`의 사실을 활용하되, 주제에 맞지 않는 고정 문단이나 상담 문구를 붙이지 않는다.
 
 초안은 사용자가 편집하기 쉬운 Markdown 파일에 저장한다. 이미지가 필요하면 본문에서 위치와 목적을 표시하고 파일을 함께 준비한다. 사용자가 수정한 뒤에는 수정본을 다시 읽고 문구·서식·이미지 순서를 유지한다.
 
-## 4. 네이버 스마트에디터에 옮기기
+사용자가 고친 글에서 반복될 만한 문체·서식 선택이 확인되면 근거를 남겨 `STYLE_BLOG.md`에 반영한다. 한 편에서만 나타난 선택은 고정 규칙으로 만들지 않는다. 작업 절차 자체를 바꾸라는 요청이 있을 때 이 `SKILL.md`를 수정한다.
 
-실제 에디터 작업 전 [네이버 에디터 참고](references/naver-editor.md)를 읽는다. 로그인은 사용자의 계정 세션을 사용하며 비밀번호·인증 코드는 사용자가 직접 처리하도록 한다. 현재 로그인 상태와 편집할 글을 확인한다.
+## 5. 네이버 스마트에디터 자동 업로드
+
+사용자가 직접 업로드를 요청하면 [네이버 에디터 참고](references/naver-editor.md)를 읽고 Codex 인앱 브라우저에서 실제 스마트에디터를 조작한다. 로그인은 사용자의 계정 세션을 사용하며 비밀번호·인증 코드는 사용자가 직접 처리하도록 한다. 현재 로그인 상태와 편집할 글을 확인한다. 로컬 파일을 만들거나 붙여넣기용 텍스트만 반환한 것은 업로드 완료가 아니다.
 
 제목과 본문을 분리해 입력하고, 문단 간 빈 줄을 유지한다. 사진은 실제 파일을 업로드한 뒤 해당 위치와 이미지 캡션을 확인한다. 소제목·강조·본문 크기는 `STYLE_BLOG.md`에 적힌 사용자 형식으로 맞춘다. 원문 캡처의 쪽수는 해당 이미지 캡션에 적고 중복 출처 문단을 정리한다.
 
-끝까지 읽어 제목, 핵심 문장, 이미지 순서, 캡션, 출처 링크를 확인한다. 저장을 요청받았으면 임시저장 완료를 확인한다. 공개 발행은 사용자가 명시적으로 요청한 경우에만 진행한다.
+끝까지 읽어 제목, 핵심 문장, 이미지 순서, 캡션, 출처 링크를 확인한다. 임시저장을 요청받았으면 실제 저장 동작과 완료 표시를 확인한다. 공개 발행은 사용자가 명시적으로 요청한 경우에만 진행한다. UI나 업로드가 막히면 마지막으로 확인된 상태와 남은 단계를 정확히 알린다.
 
 ## 완료 기준
 
