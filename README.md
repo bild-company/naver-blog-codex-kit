@@ -2,7 +2,9 @@
 
 이 저장소는 네이버 블로그 글의 **스타일·브랜드 설정 → 주제별 자료 수집 → 원문 캡처 → 초안 작성 → 사람의 수정 → 스마트에디터 업로드**를 Codex로 시연하기 위한 수강생용 자료입니다. 수강생은 빈 프로젝트 폴더를 먼저 만들고 Codex에서 연 다음, 이 저장소의 파일을 **현재 프로젝트 폴더의 루트**에 내려받습니다. 내려받은 `AGENTS.md`가 작성 스킬을 안내합니다.
 
-[자동화 개념도 열기](docs/naver-blog-automation.excalidraw) — Excalidraw에서 편집할 수 있는 파일입니다.
+![네이버 블로그 작성 자동화 개념도](docs/naver-blog-automation-preview.png)
+
+[자동화 개념도 편집 파일](docs/naver-blog-automation.excalidraw) — Excalidraw에서 열어 수정할 수 있습니다.
 
 ## 폴더 구성
 
